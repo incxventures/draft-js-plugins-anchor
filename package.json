@@ -1,7 +1,9 @@
 {
   "name": "@draft-js-plugins/anchor",
   "version": "4.2.1",
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
   "description": "Link Plugin for DraftJS",
   "author": {
     "name": "Jan Amann",
@@ -15,7 +17,9 @@
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "editor",
     "wysiwyg",
@@ -30,9 +34,9 @@
   "scripts": {
     "clean": "yarn rimraf lib",
     "build": "yarn build:js && yarn build:dts && yarn build:css",
-    "build:js": "yarn rollup --config ../../rollup.config.js",
+    "build:js": "yarn rollup --config ./rollup.config.js",
     "build:dts": "tsc -d",
-    "build:css": "node ../../scripts/build-css.js $(pwd)",
+    "build:css": "node ./build-css.js $(pwd)",
     "test": "jest"
   },
   "license": "MIT",
@@ -50,5 +54,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "rollup": "^4.9.1"
   }
 }
